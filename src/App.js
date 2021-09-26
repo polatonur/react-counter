@@ -5,8 +5,6 @@ import img from "./calculator.png";
 function App() {
   let newValue = 0;
   const [counter, setSwitch] = useState(0);
-  // const [counter2, setSwitch2] = useState(0);
-  // // const [newValue, setSwitch3] = useState(0);
   const increment = () => {
     newValue = counter + 1;
 
