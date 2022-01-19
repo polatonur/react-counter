@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <header>
-        <img src={img} alt="" />
+        <img src={img} alt="counter" />
         <span>React Counter</span>
       </header>
       <main>
@@ -35,7 +35,7 @@ function App() {
             -
           </button>
           <div className="result">
-            <span>{counter}</span>
+            <span test-id="counter-value">{counter}</span>
           </div>
           <button
             style={{ visibility: counter === 10 ? "hidden" : "visible" }}
