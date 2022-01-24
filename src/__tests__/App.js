@@ -42,6 +42,15 @@ test("should test visibility of decrement button and increment button", () => {
   expect(resetButton).toBeInTheDocument();
 });
 
-test('should verify  ', () => {
-  
+test("should verify  visibility  of reset button ", () => {
+  render(<App />);
+  const incrementButton = screen.getByRole("button", { name: /\+/i });
+  userEvent.click(incrementButton);
+  const decrementButton = screen.getByRole("button", { name: "-" });
+  expect(decrementButton).toBeVisible();
+  const resetButton = screen.getByRole("button", { name: /reset/i });
+  userEvent.click(resetButton);
+  const counterValue = screen.getByTestId(/counter-value/i);
+  expect(counterValue).toHaveTextContent("0");
+  expect(decrementButton).not.toBeVisible();
 });
