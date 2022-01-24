@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <header>
-        <img src={img} alt="counter" />
+        <img src={img} alt="counter violet" />
         <span>React Counter</span>
       </header>
       <main>
@@ -35,11 +35,12 @@ function App() {
             -
           </button>
           <div className="result">
-            <span test-id="counter-value">{counter}</span>
+            <span data-testid="counter-value">{counter}</span>
           </div>
           <button
             style={{ visibility: counter === 10 ? "hidden" : "visible" }}
             onClick={increment}
+            type="button"
           >
             +
           </button>
